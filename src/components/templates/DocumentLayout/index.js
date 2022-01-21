@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Main = styled.main`
   background-color: var(--color-light-grey);
-  height: 100%;
+  min-height: 100%;
 `;
 
 function DocumentLayout() {

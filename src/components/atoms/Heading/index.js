@@ -3,8 +3,9 @@ import styled from "styled-components";
 const StyledHeading = styled.h1`
   color: var(--color-${(props) => props.color ?? "black"});
   margin: ${(props) => props.margin ?? 0};
-  padding: 16px 0;
+  padding: 16px;
   font-size: 24px;
+  border-bottom: 1px solid var(--color-border-grey);
 
   & > div {
     margin: 0 auto;

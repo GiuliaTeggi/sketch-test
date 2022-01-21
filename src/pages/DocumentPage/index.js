@@ -3,6 +3,7 @@ import { useQuery } from "@apollo/client";
 import { GET_ARTBOARDS } from "../../graphql/queries";
 import Header from "../../components/molecules/Header";
 import Heading from "../../components/atoms/Heading";
+import ArtboardsList from "../../components/molecules/ArtboardsList";
 
 function DocumentPage() {
   const { documentId } = useParams();
@@ -22,17 +23,13 @@ function DocumentPage() {
     },
   } = data;
 
-  const artboardsList = entries.filter((entry) => entry.isArtboard);
+  const filteredArtboards = entries.filter((entry) => entry.isArtboard);
   return (
     <>
       <Header>
         <Heading>{name}</Heading>
       </Header>
-      <ul>
-        {artboardsList.map(({ name }, index) => (
-          <li key={index}>{name}</li>
-        ))}
-      </ul>
+      <ArtboardsList artboards={filteredArtboards} />
       <Outlet />
     </>
   );
