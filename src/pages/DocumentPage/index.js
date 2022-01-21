@@ -1,6 +1,8 @@
 import { useParams, Outlet } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { GET_ARTBOARDS } from "../../graphql/queries";
+import Header from "../../components/molecules/Header";
+import Heading from "../../components/atoms/Heading";
 
 function DocumentPage() {
   const { documentId } = useParams();
@@ -13,6 +15,7 @@ function DocumentPage() {
     share: {
       version: {
         document: {
+          name,
           artboards: { entries },
         },
       },
@@ -21,15 +24,17 @@ function DocumentPage() {
 
   const artboardsList = entries.filter((entry) => entry.isArtboard);
   return (
-    <div>
-      <p>Document Page</p>
+    <>
+      <Header>
+        <Heading>{name}</Heading>
+      </Header>
       <ul>
-        {artboardsList.map((el) => (
-          <li>{el.name}</li>
+        {artboardsList.map(({ name }, index) => (
+          <li key={index}>{name}</li>
         ))}
       </ul>
       <Outlet />
-    </div>
+    </>
   );
 }
 
