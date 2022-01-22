@@ -9,7 +9,8 @@ A web app to view Sketch documents and associated artboards.
 * Once inside the project directory, type `npm install` or `npm i` in the terminal to download the Node modules
 * Type `npm run start` to run the app in development mode
 * You should now be able to view the app on http://localhost:3000/
-* To visit a document page, go to http://localhost:3000/document/e981971c-ff57-46dc-a932-a60dc1804992
+* To visit a document page, go to http://localhost:3000/document/e981971c-ff57-46dc-a932-a60dc1804992 or http://localhost:3000/document/40432a93-5434-4059-87b9-
+545fd1ad6ee0
 
 ## User stories
 - As a user I can go to a document page where to view all artboards in the document. The artboards must show as thumbnails.
@@ -55,7 +56,7 @@ The overall folder structure looks like this:
         
 ## If I had more time...
 - I would test the code thoroughly using Jest and the React Testing Library.
-- I would look into ways to opmisise the loading the the artboards thumbnails, such as by lazy loading the offscreen images, and reduce the cumulative layout shift they cause, such as by reserving the space they occupy.
+- I would look into ways to opmisise the loading of the artboards thumbnails, such as by lazy loading the offscreen images, and reduce the cumulative layout shift they cause, such as by reserving the space they occupy.
 - I would look into refactoring the styles. It's the first time I have the chance to use CSS-in-JS and styled components, which I had wanted to try out for a while (usually my go-to css framework is SASS). I have more to learn on the topic.
 
 ## Tech Stack
