@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const StyledHeader = styled.header`
+  display: flex;
   background: var(--color-white);
   position: fixed;
   z-index: 1;
@@ -10,8 +11,21 @@ const StyledHeader = styled.header`
   border-bottom: 1px solid var(--color-border-grey);
 `;
 
+const HeaderContentWrapper = styled.div`
+  margin: 0 auto;
+  max-width: var(--max-width-content);
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+`;
+
 function Header({ children }) {
-  return <StyledHeader>{children}</StyledHeader>;
+  return (
+    <StyledHeader>
+      <HeaderContentWrapper>{children}</HeaderContentWrapper>
+    </StyledHeader>
+  );
 }
 
 export default Header;

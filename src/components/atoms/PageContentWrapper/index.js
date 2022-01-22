@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   min-height: 50vh;
+  margin-top: var(--min-header-height);
 `;
 
 function PageContentWrapper({ children }) {

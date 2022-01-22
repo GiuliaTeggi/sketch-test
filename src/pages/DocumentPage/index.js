@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { GET_ARTBOARDS } from "../../graphql/queries";
-import Header from "../../components/molecules/Header";
 import Heading from "../../components/atoms/Heading";
 import ArtboardsList from "../../components/molecules/ArtboardsList";
 import ContentFallback from "../../components/molecules/ContentFallback";
+import Logo from "../../components/atoms/Logo";
+import PageLayout from "../../components/templates/PageLayout";
 
 function DocumentPage() {
   const { documentId } = useParams();
@@ -35,12 +36,15 @@ function DocumentPage() {
 
   const filteredArtboards = entries.filter((entry) => entry.isArtboard);
   return (
-    <>
-      <Header>
-        <Heading>{name}</Heading>
-      </Header>
-      <ArtboardsList artboards={filteredArtboards} />
-    </>
+    <PageLayout
+      header={
+        <>
+          <Logo margin={"0 32px 0 0"} />
+          <Heading>{name}</Heading>
+        </>
+      }
+      content={<ArtboardsList artboards={filteredArtboards} />}
+    />
   );
 }
 

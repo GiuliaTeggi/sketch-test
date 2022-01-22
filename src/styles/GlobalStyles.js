@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
     --color-orange: #f26726;
     --color-border-grey: #e6e6e6;
     --max-width-content: 1300px;
-    --min-header-height: 57px;
+    --min-header-height: 65px;
   }
 
   body {

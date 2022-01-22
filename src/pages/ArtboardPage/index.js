@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { GET_ARTBOARDS } from "../../graphql/queries";
-import Header from "../../components/molecules/Header";
 import Heading from "../../components/atoms/Heading";
 import ContentFallback from "../../components/molecules/ContentFallback";
+import PageLayout from "../../components/templates/PageLayout";
+import ArtboardDetail from "../../components/molecules/ArtboardDetail";
 
 function ArtboardPage() {
   const { documentId, artboardId } = useParams();
@@ -25,20 +26,18 @@ function ArtboardPage() {
     share: {
       version: {
         document: {
-          name,
           artboards: { entries },
         },
       },
     },
   } = data;
 
+  const currentArtboard = entries[artboardId];
   return (
-    <>
-      <Header>
-        <Heading>{name}</Heading>
-      </Header>
-      <p>Artboard Page</p>
-    </>
+    <PageLayout
+      header={<Heading>{currentArtboard.name || "[Artboard Name]"}</Heading>}
+      content={<ArtboardDetail artboard={currentArtboard} />}
+    />
   );
 }
 
