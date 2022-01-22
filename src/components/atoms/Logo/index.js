@@ -1,4 +1,4 @@
-import { ReactComponent as SketchLogo } from "../../../assets/sketch-logo.svg";
+import { SketchLogo } from "../../../assets";
 import styled from "styled-components";
 
 const StyledLogo = styled.div`

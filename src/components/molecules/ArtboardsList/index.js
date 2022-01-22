@@ -8,6 +8,7 @@ const List = styled.ul`
   padding: 0;
   flex-wrap: wrap;
   max-width: var(--max-width-content);
+  justify-content: space-between;
 
   & li {
     padding: 24px;

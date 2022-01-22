@@ -5,7 +5,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  html, body, #root {
+  html, #root {
     height: 100%
   }
 
@@ -20,12 +20,13 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-      margin: 0;
+    margin: 0;
     font-size: 16px;
     line-height: 1.5;
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    height: calc(100% - var(--min-header-height));
   }
   
 `;

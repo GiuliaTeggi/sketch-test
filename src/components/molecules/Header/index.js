@@ -18,6 +18,7 @@ const HeaderContentWrapper = styled.div`
   padding: 16px;
   display: flex;
   align-items: center;
+  position: relative;
 `;
 
 function Header({ children }) {

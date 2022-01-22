@@ -9,8 +9,8 @@ const Wrapper = styled.div`
   margin-top: var(--min-header-height);
 `;
 
-function PageContentWrapper({ children }) {
-  return <Wrapper>{children}</Wrapper>;
+function PageContentWrapper({ children, className }) {
+  return <Wrapper className={className}>{children}</Wrapper>;
 }
 
 export default PageContentWrapper;

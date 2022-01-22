@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Heading from "../../components/atoms/Heading";
 import PageLayout from "../../components/templates/PageLayout";
 import { Link } from "react-router-dom";
+import Logo from "../../components/atoms/Logo";
 
 const StyledLink = styled(Link)`
   color: var(--color-orange);
@@ -12,7 +13,12 @@ const StyledLink = styled(Link)`
 function HomePage() {
   return (
     <PageLayout
-      header={<Heading>Sketch Document Viewer</Heading>}
+      header={
+        <>
+          <Logo margin={"0 32px 0 0"} />
+          <Heading>Sketch Document Viewer</Heading>
+        </>
+      }
       content={
         <p>
           Please select a document to view e.g.{" "}
