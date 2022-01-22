@@ -9,8 +9,7 @@ A web app to view Sketch documents and associated artboards.
 * Once inside the project directory, type `npm install` or `npm i` in the terminal to download the Node modules
 * Type `npm run start` to run the app in development mode
 * You should now be able to view the app on http://localhost:3000/
-* To visit a document page, go to http://localhost:3000/document/e981971c-ff57-46dc-a932-a60dc1804992 or http://localhost:3000/document/40432a93-5434-4059-87b9-
-545fd1ad6ee0
+* To visit a document page, go to http://localhost:3000/document/e981971c-ff57-46dc-a932-a60dc1804992 or http://localhost:3000/document/40432a93-5434-4059-87b9-545fd1ad6ee0
 
 ## User stories
 - As a user I can go to a document page where to view all artboards in the document. The artboards must show as thumbnails.
