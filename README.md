@@ -61,7 +61,7 @@ The overall folder structure looks like this:
 ## Tech Stack
  - React
  - React Router
- - GraphQL
+ - GraphQL with Apollo Client
  - Styled Components
 
  ## Preview
