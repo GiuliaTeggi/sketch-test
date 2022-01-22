@@ -13,8 +13,10 @@ const GlobalStyles = createGlobalStyle`
     --color-black: #000000;
     --color-white: #ffffff;
     --color-light-grey: #f9f9f9;
+    --color-orange: #f26726;
     --color-border-grey: #e6e6e6;
     --max-width-content: 1300px;
+    --min-header-height: 57px;
   }
 
   body {

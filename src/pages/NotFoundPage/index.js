@@ -1,8 +1,11 @@
+import PageContentWrapper from "../../components/atoms/PageContentWrapper";
+import Heading from "../../components/atoms/Heading";
+
 function NotFoundPage() {
   return (
-    <div>
-      <h1>Page not found</h1>
-    </div>
+    <PageContentWrapper>
+      <Heading>Page not found :(</Heading>
+    </PageContentWrapper>
   );
 }
 

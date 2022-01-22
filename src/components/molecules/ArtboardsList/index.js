@@ -4,8 +4,10 @@ import ArtboardPreview from "../ArtboardPreview";
 const List = styled.ul`
   display: flex;
   list-style-type: none;
+  margin: var(--min-header-height) auto 0 auto;
   padding: 0;
   flex-wrap: wrap;
+  max-width: var(--max-width-content);
 
   & li {
     padding: 24px;

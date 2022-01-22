@@ -25,7 +25,12 @@ function ArtboardPreview({ name, thumbnail, link }) {
     <StyledLink to={link}>
       <StyledPreview>
         <div>
-          <img src={thumbnail} alt={`${name} preview`} />
+          <img
+            src={thumbnail}
+            alt={`${name} preview`}
+            width="100%"
+            height="auto"
+          />
         </div>
         <p>{name}</p>
       </StyledPreview>
