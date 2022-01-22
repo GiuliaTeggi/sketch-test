@@ -10,6 +10,10 @@ const List = styled.ul`
   max-width: var(--max-width-content);
   justify-content: space-between;
 
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+
   & li {
     padding: 24px;
     display: flex;

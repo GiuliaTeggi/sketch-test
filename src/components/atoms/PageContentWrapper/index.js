@@ -4,6 +4,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   flex-direction: column;
   min-height: 50vh;
   margin-top: var(--min-header-height);

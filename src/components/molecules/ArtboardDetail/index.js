@@ -4,6 +4,10 @@ const ImageWrapper = styled.div`
   max-height: calc(100vh - var(--min-header-height));
   display: flex;
   padding: 32px;
+
+  @media (max-width: 425px) {
+    margin-top: var(--min-header-height);
+  }
 `;
 
 const Image = styled.img`

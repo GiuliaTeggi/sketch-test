@@ -9,11 +9,24 @@ import {
   BreadCrumb,
 } from "../../../assets";
 
+const Container = styled.div`
+  display: flex;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
+`;
+
 const LinksWrapper = styled.div`
   position: absolute;
   left: 0;
   display: flex;
   align-items: center;
+  @media (max-width: 425px) {
+    position: relative;
+  }
 `;
 
 const PreviousLinkWrapper = styled.div`
@@ -38,10 +51,7 @@ function ArtboardHeader({ documentId, currentIndex, totalArtboards, name }) {
   const isFirstArtboard = currentIndex === 0;
   const isLastArtboard = currentIndex === totalArtboards - 1;
   return (
-    <>
-      <Heading flex={1} textAlign={"center"}>
-        {name}
-      </Heading>
+    <Container>
       <LinksWrapper>
         <IconLink
           url={`/document/${documentId}`}
@@ -71,7 +81,10 @@ function ArtboardHeader({ documentId, currentIndex, totalArtboards, name }) {
           />
         )}
       </LinksWrapper>
-    </>
+      <Heading flex={1} textAlign={"center"}>
+        {name}
+      </Heading>
+    </Container>
   );
 }
 
