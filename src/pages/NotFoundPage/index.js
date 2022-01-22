@@ -1,12 +1,8 @@
-import PageContentWrapper from "../../components/atoms/PageContentWrapper";
 import Heading from "../../components/atoms/Heading";
+import PageLayout from "../../components/templates/PageLayout";
 
 function NotFoundPage() {
-  return (
-    <PageContentWrapper>
-      <Heading>Page not found :(</Heading>
-    </PageContentWrapper>
-  );
+  return <PageLayout content={<Heading>Page not found :(</Heading>} />;
 }
 
 export default NotFoundPage;
