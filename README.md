@@ -22,7 +22,7 @@ A web app to view Sketch documents and associated artboards.
 
 I decided to develop this app using the Create React App package in order to speed up development and because the use case was suitable for a client side rendered solution. I have then installed React Router in order to create the routes needed to render the two pages mentioned in project requirements - the Document and Artboard pages. Both routes load the artsboards data coming from the graphQL api (`https://graphql.sketch.cloud/api`) so not to depend on each other, allowing for a future extension of the project. In addition to the project requirements, I have added a Home page to handle the application base path (`/`) and a NotFound page to handle any non existing route.
 
-The app was developed desktop-first assuming the majority of the document viewer users would be desktop users.
+The app is responsive and was developed desktop-first assuming the majority of the document viewer users would be desktop users.
 
 Regarding the components that make up the application, I have attempted to organise them following atomic design principles, dividing them in pages, templates, organisms, molecules and atoms. There are several valid ways to structure components folders, atomic design is a methodology I've been following lately which I think is clearer and easier to stick to than others. Therefore, the application pages (`Artboard`, `Document`, `Home` and `NotFound`) can be found in the `pages` folder, the `PageLayout` shared by all of them is in the components `templates` folder, the `ArtboardHeader` component, which includes the components to navigate between artboards is in `organisms`, the `ArtboardsList` component is in `molecules` and the `Heading` component can be found in `atoms`.
 
